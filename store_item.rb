@@ -15,40 +15,16 @@ class StoreItem
   attr_reader :item, :color, :price, :isle
   attr_writer :price, :isle
 
-  def initialize (item, color, price, isle)
-    @item = item
-    @color = color
-    @price = price
-    @isle = isle
-  end
-
-  def item 
-    @item
-  end
-
-  def color
-    @color
-  end
-
-  def price
-    @price
-  end
-
-  def isle
-    @isle
-  end
-
-  def price(new_price)
-    @price = new_price
-  end
-
-  def isle(new_isle)
-    @isle = new_isle
+  def initialize (input_options)
+    @item = input_options[:item]
+    @color = input_options[:color]
+    @price = input_options[:price]
+    @isle = input_options[:isle]
   end
 
 end
 
-item1 = StoreItem.new("apple", "red", 3.00, 5)
+item1 = StoreItem.new(:item => "apple", :color => "red", :price => 3.00, :isle => 5)
 
 p item1
 
