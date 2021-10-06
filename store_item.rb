@@ -11,6 +11,10 @@
 # p "Our #{item1[:product]} is #{item1[:color]}, costs $#{item1[:price]} dollars and is located in isle #{item1[:isle]}."
 
 class StoreItem
+  
+  attr_reader :item, :color, :price, :isle
+  attr_writer :price, :isle
+
   def initialize (item, color, price, isle)
     @item = item
     @color = color
