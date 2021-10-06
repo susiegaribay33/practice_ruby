@@ -28,3 +28,6 @@ item1 = StoreItem.new(:item => "apple", :color => "red", :price => 3.00, :isle =
 
 p item1
 
+puts item1.color
+puts item1.price
+puts item1.isle
