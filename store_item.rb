@@ -11,7 +11,6 @@
 # p "Our #{item1[:product]} is #{item1[:color]}, costs $#{item1[:price]} dollars and is located in isle #{item1[:isle]}."
 
 class StoreItem
-  
   attr_reader :item, :color, :price, :isle
   attr_writer :price, :isle
 
@@ -22,12 +21,16 @@ class StoreItem
     @isle = input_options[:isle]
   end
 
+  def print_info
+    p "#{item} is #{color}, costs $#{price}, and is located in isle #{isle}."
+  end
+
 end
 
-item1 = StoreItem.new(:item => "apple", :color => "red", :price => 3.00, :isle => 5)
+item1 = StoreItem.new(item: "apple", color: "red", price: 3.00, isle: 5)
 
 p item1
-
 puts item1.color
 puts item1.price
 puts item1.isle
+p item1.print_info
